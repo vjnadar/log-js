@@ -237,7 +237,7 @@ class Login extends Component{
                 
             </Row>    
     
-            <Form className="mt-3" >
+            <Form className="mt-3" onSubmit={()=>{this.login(this.state.email.value,this.state.password.value,this.state.rememberMe.checked)}} >
     
                 <Container>
     
@@ -301,7 +301,7 @@ class Login extends Component{
     
                         <FormGroup check row> 
     
-                            <Button id="login" color="success" size="md" onClick={()=>{this.login(this.state.email.value,this.state.password.value,this.state.rememberMe.checked)}} disabled={!(this.isFormValid())}>Sign in</Button>
+                            <Button id="login" color="success" size="md" disabled={!(this.isFormValid())}>Sign in</Button>
     
                         </FormGroup>
     

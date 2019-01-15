@@ -363,7 +363,7 @@ class About extends Component{
             
             modal=(
 
-                <Modal isOpen={this.state.modal} toggle={this.changeModalStateHandler} className={this.props.className}>
+                <Modal isOpen={this.state.modal} toggle={this.changeModalStateHandler} className={this.props.className} style={{fontFamily:'Montserrat, sans-serif'}}>
 
                     <ModalHeader>{this.state.selectedPost.fromDB.time}</ModalHeader>
 
@@ -375,7 +375,7 @@ class About extends Component{
 
                     <ModalFooter>
                         
-                        <Button id="edit" color="dark" onClick={this.state.edit?()=>{this.updatePost(this.state.selectedPost['fromDB'])}:this.switchToEdit} disabled={this.isUpdatedTextNotValid(this.state.edit)}>{this.state.edit?'Submit':'Edit'}</Button>
+                        <Button id="edit" color={this.state.edit?'success':'info'} onClick={this.state.edit?()=>{this.updatePost(this.state.selectedPost['fromDB'])}:this.switchToEdit} disabled={this.isUpdatedTextNotValid(this.state.edit)}>{this.state.edit?'Submit':'Edit'}</Button>
 
                         <Button color="dark" onClick={this.changeModalStateHandler}>Cancel</Button>
 

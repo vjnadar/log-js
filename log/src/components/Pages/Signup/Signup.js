@@ -208,7 +208,7 @@ class Login extends Component{
                 
             </Row>    
     
-            <Form className="mt-3">
+            <Form className="mt-3" onSubmit={()=>{this.sendpost(this.state.email.value,this.state.password.value)}}>
     
                 <Container>
     
@@ -255,7 +255,7 @@ class Login extends Component{
     
                         <FormGroup check row> 
     
-                            <Button id ="signup" color="primary" size="md"  onClick={()=>{this.sendpost(this.state.email.value,this.state.password.value)}} disabled={!(this.isFormValid())}>Sign up</Button>
+                            <Button id ="signup" color="primary" size="md"  disabled={!(this.isFormValid())}>Sign up</Button>
     
                         </FormGroup>
     
