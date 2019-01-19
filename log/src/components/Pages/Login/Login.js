@@ -97,6 +97,8 @@ class Login extends Component{
     }
 
     login=(email,password,rememberMe)=>{
+
+        console.log(rememberMe);
         
         const credentials={
 
@@ -286,7 +288,7 @@ class Login extends Component{
     
                             <Label check>
     
-                            <Input id="rememberme" type={this.state.rememberMe.elementConfig['type']}  checked ={this.state.rememberMe.checked}
+                            <Input id="rememberme" type={this.state.rememberMe.elementConfig['type']}  defaultChecked ={this.state.rememberMe.checked}
                             onChange={(event)=>{this.formChangeHandler(event)}}/>  Remember me</Label>
     
                         </FormGroup>
