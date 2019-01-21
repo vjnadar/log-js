@@ -96,15 +96,15 @@ class Login extends Component{
 
     }
 
-    login=(email,password,rememberMe)=>{
+    login=()=>{
 
-        console.log(rememberMe);
+        console.log(this.state.rememberMe.checked);
         
         const credentials={
 
-            email:email,
+            email:this.state.email.value,
 
-            password:password
+            password:this.state.password.value
             
         }
 
@@ -239,7 +239,7 @@ class Login extends Component{
                 
             </Row>    
     
-            <Form className="mt-3" onSubmit={()=>{this.login(this.state.email.value,this.state.password.value,this.state.rememberMe.checked)}} >
+            <Form className="mt-3" onSubmit={this.login} >
     
                 <Container>
     
@@ -289,7 +289,7 @@ class Login extends Component{
                             <Label check>
     
                             <Input id="rememberme" type={this.state.rememberMe.elementConfig['type']}  defaultChecked ={this.state.rememberMe.checked}
-                            onChange={(event)=>{this.formChangeHandler(event)}}/>  Remember me</Label>
+                            onChange={(event)=>{this.formChangeHandler(event)}}/>Remember me</Label>
     
                         </FormGroup>
     
@@ -328,6 +328,7 @@ class Login extends Component{
                     </Col>
                   
                 </Row>
+                
                 {this.props.error?
 
                     <Row className="mt-1">

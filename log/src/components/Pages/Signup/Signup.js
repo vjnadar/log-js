@@ -162,13 +162,13 @@ class Login extends Component{
         
     }
 
-    sendpost=(email,password)=>{
+    sendpost=()=>{
 
         const credentials={
 
-            email:email,
+            email:this.state.email.value,
 
-            password:password
+            password:this.state.password.value
         
         }
 
@@ -208,7 +208,7 @@ class Login extends Component{
                 
             </Row>    
     
-            <Form className="mt-3" onSubmit={()=>{this.sendpost(this.state.email.value,this.state.password.value)}}>
+            <Form className="mt-3" onSubmit={this.sendpost}>
     
                 <Container>
     

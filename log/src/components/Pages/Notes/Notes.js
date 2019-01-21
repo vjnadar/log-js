@@ -209,9 +209,9 @@ class About extends Component{
 
     }
 
-    sendPost=(post)=>{
+    sendPost=()=>{
 
-        this.props.onSendingPost(post,this.props.token,this.props.userId);
+        this.props.onSendingPost(this.state.postNote['fromDB'].post,this.props.token,this.props.userId);
 
         this.setState(prevState=>{
 
@@ -326,9 +326,9 @@ class About extends Component{
 
     }
 
-    updatePost=(postUpdate)=>{
+    updatePost=()=>{
 
-        this.props.onUpdating(postUpdate,this.props.token,this.props.userId);
+        this.props.onUpdating(this.state.selectedPost['fromDB'],this.props.token,this.props.userId);
 
         this.changeModalStateHandler();
 
@@ -345,7 +345,7 @@ class About extends Component{
 
                 <br/>
 
-                <Button id="log" color="success" onClick={()=>{this.sendPost(this.state.postNote['fromDB'].post)}} disabled={this.isTextNotValid()}>Log</Button>
+                <Button id="log" color="success" onClick={this.sendPost} disabled={this.isTextNotValid()}>Log</Button>
 
             </>
 
@@ -375,7 +375,7 @@ class About extends Component{
 
                     <ModalFooter>
                         
-                        <Button id="edit" color={this.state.edit?'success':'info'} onClick={this.state.edit?()=>{this.updatePost(this.state.selectedPost['fromDB'])}:this.switchToEdit} disabled={this.isUpdatedTextNotValid(this.state.edit)}>{this.state.edit?'Submit':'Edit'}</Button>
+                        <Button id="edit" color={this.state.edit?'success':'info'} onClick={this.state.edit?this.updatePost:this.switchToEdit} disabled={this.isUpdatedTextNotValid(this.state.edit)}>{this.state.edit?'Submit':'Edit'}</Button>
 
                         <Button color="dark" onClick={this.changeModalStateHandler}>Cancel</Button>
 
