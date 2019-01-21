@@ -116,7 +116,7 @@ class Login extends Component{
 
         let formValid=false;
 
-        if(this.state.email.valid&&this.state.password.touched){
+        if(this.state.email.valid&&this.state.password.valid){
 
             formValid=true;
 
@@ -328,7 +328,7 @@ class Login extends Component{
                     </Col>
                   
                 </Row>
-                
+
                 {this.props.error?
 
                     <Row className="mt-1">

@@ -98,7 +98,7 @@ class Login extends Component{
 
         let formValid=false;
         
-        if(this.state.email.valid&&this.state.password.touched){
+        if(this.state.email.valid&&this.state.password.valid){
 
             formValid=true;
 
