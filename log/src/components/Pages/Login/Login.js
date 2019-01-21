@@ -187,7 +187,7 @@ class Login extends Component{
                         
                         ...prevState.rememberMe,
 
-                        checked:!prevState.checked
+                        checked:!prevState.rememberMe.checked
 
                     }
 
