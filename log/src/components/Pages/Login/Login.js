@@ -316,7 +316,7 @@ class Login extends Component{
                     <Col xs={{size:10,offset:1}} sm={{size:11,offset:1}} md={{size:11,offset:1}} lg={{size:4,offset:4}}>
     
                     <FormText color="muted" className="mb-1">
-                        Don't have an account? Sign up in no time.
+                        Don`t have an account? Sign up in no time.
                     </FormText>    
     
                         <FormGroup check row> 

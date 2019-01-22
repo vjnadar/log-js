@@ -370,7 +370,7 @@ class About extends Component{
                     <ModalBody>
 
                         <Input type={this.state.selectedPost.elementConfig.type} id={this.state.selectedPost.elementConfig.id} value={this.state.selectedPost.fromDB.post} onChange={(event)=>{this.changeHandler(event)}} disabled={!this.state.edit} />
-                        {!this.state.selectedPost.valid&&this.state.edit?<FormText>This field can't be left blank.</FormText>:null}
+                        {!this.state.selectedPost.valid&&this.state.edit?<FormText>This field cannnot be left blank.</FormText>:null}
                     </ModalBody>    
 
                     <ModalFooter>
