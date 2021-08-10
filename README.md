@@ -8,6 +8,9 @@ A simple react js application using Redux js and Firebase. The application allow
 -   Redux JS
 -   Firebase
 
+**.env file**
+Create a new `.env` file by refering the .env_sample file, inside the root folder.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
