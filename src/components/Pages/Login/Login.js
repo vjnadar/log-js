@@ -34,12 +34,12 @@ class Login extends Component {
             },
             touched: false,
         },
-        rememberMe: {
-            elementConfig: {
-                type: 'checkbox',
-            },
-            checked: false,
-        },
+        // rememberMe: {
+        //     elementConfig: {
+        //         type: 'checkbox',
+        //     },
+        //     checked: false,
+        // },
         isSignUp: false,
     };
     componentDidMount() {
@@ -51,7 +51,7 @@ class Login extends Component {
         }
     };
     login = () => {
-        console.log(this.state.rememberMe.checked);
+        // console.log(this.state.rememberMe.checked);
         const credentials = {
             email: this.state.email.value,
             password: this.state.password.value,
@@ -91,16 +91,16 @@ class Login extends Component {
                 };
             });
         }
-        if (event.target.id === 'rememberme') {
-            this.setState((prevState) => {
-                return {
-                    rememberMe: {
-                        ...prevState.rememberMe,
-                        checked: !prevState.rememberMe.checked,
-                    },
-                };
-            });
-        }
+        // if (event.target.id === 'rememberme') {
+        //     this.setState((prevState) => {
+        //         return {
+        //             rememberMe: {
+        //                 ...prevState.rememberMe,
+        //                 checked: !prevState.rememberMe.checked,
+        //             },
+        //         };
+        //     });
+        // }
     };
     loginError = (error) => {
         switch (error.trim()) {
@@ -164,7 +164,7 @@ class Login extends Component {
                                 </FormGroup>
                             </Col>
                         </Row>
-                        <Row>
+                        {/* <Row>
                             <Col xs={{ size: 10, offset: 1 }} sm={{ size: 11, offset: 1 }} md={{ size: 11, offset: 1 }} lg={{ size: 4, offset: 4 }}>
                                 <FormGroup>
                                     <Label check>
@@ -180,7 +180,7 @@ class Login extends Component {
                                     </Label>
                                 </FormGroup>
                             </Col>
-                        </Row>
+                        </Row> */}
                         <Row>
                             <Col xs={{ size: 10, offset: 1 }} sm={{ size: 11, offset: 1 }} md={{ size: 11, offset: 1 }} lg={{ size: 4, offset: 4 }}>
                                 <FormGroup check row>
